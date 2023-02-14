@@ -1,0 +1,47 @@
+<!-- Mājas lapas dizains. Оформление сайта:background-color- цвет фона, font- шрифт... 
+https://www.w3schools.com/html/default.asp-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>repl.it</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="header">
+  <img src="riga.jpg" width="200px">
+  <p>Rīgas Purvciema vidusskola</p>
+</div>
+<div id="menu">
+ 
+  <p><a href="index.html">Galvēna</a></p>
+  <p><a href="uzdevums1.html">Uzdevums1</a></p>
+  <p><a href="uzdevums2.html">Uzdevums2</a></p>
+  <p><a href="uzdevums3.html">Uzdevums3</a></p>
+  <p><a href="uzdevums4.html">Uzdevums4</a></p>
+</div>
+
+<div id="content">
+<!-- https://www.w3schools.com/js/js_arrays.asp-->
+  <h1>Problēmsituācija piemērs </h1>
+  <h2> Izmaksas</h2>
+  <p id = "izvade1">... </p>
+<script>
+cukura_cena = Number(prompt("Ievadiet cukura cenu "));
+cukurs_uz_kg = Number(prompt("Ievadiet cik daudz cukura vajag uz kg "));
+aboli_svars = Number(prompt("Ievadiet cik daudz abolu kg "));
+if(cukura_cena>0 && cukurs_uz_kg>0 && aboli_svars>0){
+   izmaksa_kg = cukura_cena * cukurs_uz_kg;
+   maksa= izmaksa_kg * aboli_svars;
+   izvade1.innerHTML="Uz "+aboli_svars+" kg ābolu izmaksas būs "+maksa+" EUR";
+}else{
+   izvade1.innerHTML="Kļūda datos";}
+</script>
+  
+</div>
+<div class="footer"> Rīga, 2021 </div>
+
+    
+  </body>
+</html>

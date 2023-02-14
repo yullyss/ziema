@@ -1,0 +1,72 @@
+<!-- Mājas lapas dizains. Оформление сайта:background-color- цвет фона, font- шрифт... 
+https://www.w3schools.com/html/default.asp-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>repl.it</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="header">
+  <img src="riga.jpg" width="200px">
+  <p>Rīgas Purvciema vidusskola</p>
+</div>
+<div id="menu">
+ 
+  <p><a href="index.html">Galvēna</a></p>
+  <p><a href="uzdevums1.html">Uzdevums1</a></p>
+  <p><a href="uzdevums2.html">Uzdevums2</a></p>
+  <p><a href="uzdevums3.html">Uzdevums3</a></p>
+  <p><a href="uzdevums4.html">Uzdevums4</a></p>
+
+</div>
+<div id="content">
+    <h2> Izmaksas</h2>
+  <p id = "izvade1">... </p>
+    <h2> Piegade</h2>
+  <p id = "izvade2">... </p>
+    <h2> Atlaides</h2>
+  <p id = "izvade3">... </p>
+  <script>
+ skaits = Number(prompt("Ievadiet kreklu skaitu "));
+ apdruka = prompt("Ievadiet apdrukas veidu: TEKSTS, ZIME vai FOTO ");
+ piegade = prompt("Vai Jums ir vajadzīga piegāde? (TRUE/FALSE) ");
+    
+if (apdruka == "TEKSTS") { 
+   izmaksa = skaits * 5; 
+  izvade1.innerHTML="imaksas " +izmaksa;
+}  
+else if (apdruka == "ZIME"){
+  izmaksa = skaits * 7;
+  izvade1.innerHTML="imaksas " +izmaksa;
+}
+else if (apdruka == "FOTO"){
+  izmaksa = skaits * 20;
+  izvade1.innerHTML="izmaksas " +izmaksa;
+}
+else {
+  izvade1.innerHTML="Kļūda datos";
+} 
+ 
+if (piegade = "TRUE"){
+  if (izmaksa < 50){izmaksa = izmaksa +15; 
+  izvade2.innerHTML="izmaksas ar piegadi " +izmaksa;}
+   
+}else {izvade2.innerHTML="izmaksas bez piegades " +izmaksa;}
+
+if (izmaksa > 100){
+   izmaksa = izmaksa* 0.95; 
+  izvade3.innerHTML="izmaksas ar atlaidi " +izmaksa;
+}else {izvade3.innerHTML="izmaksas bez atlaides " +izmaksa;}
+
+    
+</script>
+  
+</div>
+<div class="footer"> Rīga, 2021 </div>
+
+    
+  </body>
+</html>

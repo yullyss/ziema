@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>repl.it</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="header">
+  <img src="riga.jpg" width="200px">
+  <p>Rīgas Purvciema vidusskola</p>
+</div>
+<div id="menu">
+ 
+  <p><a href="index.html">Galvēna</a></p>
+  <p><a href="uzdevums1.html">Uzdevums1</a></p>
+  <p><a href="uzdevums2.html">Uzdevums2</a></p>
+  <p><a href="uzdevums3.html">Uzdevums3</a></p>
+  <p><a href="uzdevums4.html">Uzdevums4</a></p>
+
+</div>
+<div id="content">
+  <h2> Auguma mērījumi </h2>
+<p> Vidējais augums:</p>
+<p id = "izvade1">... </p>
+<p> Meiteņu skaits, kuru augums nepārsniedz 145 cm:</p>
+<p id = "izvade2">... </p>
+<p> Mazākās meitenes augums:</p>
+<p id = "izvade3">... </p>
+<!-- https://www.w3schools.com/js/js_arrays.asp-->
+		<script>
+var garumi = [152, 155, 154, 135, 142, 158, 131,
+            137, 144, 161, 144, 145, 147, 150,
+            142, 154, 144, 164, 145, 147];
+var i, summa, vid, skaits, min;
+
+// vidējais augums
+//https://www.w3schools.com/jsref/jsref_length_array.asp
+summa = 0;
+for (i = 0; i < garumi.length; i++) {
+  summa = summa + garumi[i];
+}
+//https://www.w3schools.com/js/js_math.asp
+vid = Math.round(summa / garumi.length)
+izvade1.innerHTML = vid + " cm";
+// skaits
+skaits = 0;
+for (i = 0; i < garumi.length; i++) {
+  if (garumi[i] <= 145) {
+    skaits++;
+  }
+}
+izvade2.innerHTML = skaits;
+// mazākā
+min = garumi[0];
+for (i = 1; i < garumi.length; i++) {
+  if (garumi[i] < min) {
+    min = garumi[i];
+    n=i;
+  }
+}
+izvade3.innerHTML = min + " cm";
+
+		</script>
+</div>
+<div class="footer"> Rīga, 2021 </div>
+
+    
+  </body>
+</html>
+
+
+
